@@ -1,0 +1,19 @@
+.nav {
+  background-color: rgba(255, 255, 255, 4%);
+  margin-top: 20px;
+}
+.mobileNav {
+  width: 254px;
+  background-color: rgba(255, 255, 255, 4%);
+}
+.desktopNav {
+  display: none;
+}
+@media (min-width: 640px) {
+  .mobileNav {
+    display: none;
+  }
+  .desktopNav {
+    display: block;
+  }
+}
