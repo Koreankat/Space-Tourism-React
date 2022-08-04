@@ -1,3 +1,10 @@
+import Navbar from "../NavBar/navbar"
+
 export default function Destination() {
-  return <div>destinations</div>
+  return (
+    <div>
+      <Navbar />
+      destinations
+    </div>
+  )
 }

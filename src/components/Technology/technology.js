@@ -1,3 +1,10 @@
+import Navbar from "../NavBar/navbar"
+
 export default function Technology() {
-  return <div>Technology</div>
+  return (
+    <div>
+      <Navbar />
+      Technology
+    </div>
+  )
 }

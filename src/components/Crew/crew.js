@@ -1,3 +1,10 @@
+import Navbar from "../NavBar/navbar"
+
 export default function Crew() {
-  return <div>crew</div>
+  return (
+    <div>
+      <Navbar />
+      crew
+    </div>
+  )
 }

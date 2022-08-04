@@ -1,0 +1,19 @@
+.menuBg {
+  background-image: url(/src/assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 640px) {
+  .menuBg {
+    background-image: url(/src/assets/home/background-home-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (min-width: 1024px) {
+  .menuBg {
+    background-image: url(/src/assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
