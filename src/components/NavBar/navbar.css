@@ -14,7 +14,7 @@
   position: absolute;
   bottom: -2px;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 5px;
   background-color: white;
   opacity: 0;
@@ -44,7 +44,6 @@
 }
 .mobileNav {
   width: 254px;
-  background-color: rgba(255, 255, 255, 4%);
 }
 .desktopNav {
   display: none;
@@ -55,5 +54,16 @@
   }
   .desktopNav {
     display: block;
+  }
+  .nav-item::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    opacity: 0;
+    transition: 0.3s;
   }
 }

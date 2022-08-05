@@ -7,36 +7,6 @@ import Star from "../../assets/shared/logo.svg"
 
 export default function Navbar() {
   const [icon, setIcon] = useState(true)
-  const [nav1, setNav1] = useState(true)
-  const [nav2, setNav2] = useState(false)
-  const [nav3, setNav3] = useState(false)
-  const [nav4, setNav4] = useState(false)
-  let navi1
-  let navi2
-  let navi3
-  let navi4
-
-  if (nav1) {
-    navi1 += " navi"
-    navi2 -= " navi"
-    navi3 -= " navi"
-    navi4 -= " navi"
-  } else if (nav2) {
-    navi1 -= " navi"
-    navi2 += " navi"
-    navi3 -= " navi"
-    navi4 -= " navi"
-  } else if (nav3) {
-    navi1 -= " navi"
-    navi2 -= " navi"
-    navi3 += " navi"
-    navi4 -= " navi"
-  } else if (nav4) {
-    navi1 -= " navi"
-    navi2 -= " navi"
-    navi3 -= " navi"
-    navi4 += " navi"
-  }
 
   let iconOn = " block"
   let iconOff = " hidden"
@@ -53,90 +23,61 @@ export default function Navbar() {
   }
 
   return (
-    <div className={`flex justify-end mt-[20px]`}>
-      <div className={` desktopNav flex items-center`}>
+    <div className={`flex justify-end sm:mt-[20px] `}>
+      <div className={` desktopNav flex`}>
         <img src={Star} alt='star' className='absolute left-5 top-[25px]'></img>
         <div className='lg:w-[473px] lg:h-[1px] lg:block hidden bg-[#ffffff1a] left-[170px] top-[50px] absolute z-50'></div>
         <nav className='nav lg:w-[51.875rem] sm:w-[28.125rem] flex justify-between items-center lg:pr-[130px] lg:pl-[130px] '>
-          <a
-            href='/'
-            className={`nav-item ${navi1}`}
-            onClick={() => {
-              setNav1(true)
-              setNav2(!nav2)
-              setNav3(!nav3)
-              setNav4(!nav4)
-            }}
-          >
+          <a href='/' className={`nav-item navi}`} onClick={() => {}}>
             00 HOME
           </a>
-          <a
-            href='/destination'
-            className={`nav-item ${navi2}`}
-            onClick={() => {
-              setNav1(!nav1)
-              setNav2(true)
-              setNav3(!nav3)
-              setNav4(!nav4)
-            }}
-          >
+          <a href='/destination' className={`nav-item `} onClick={() => {}}>
             01 DESTINATION
           </a>
-          <a
-            href='/crew'
-            className={`nav-item ${navi3}`}
-            onClick={() => {
-              setNav1(!nav1)
-              setNav2(!nav2)
-              setNav3(true)
-              setNav4(!nav4)
-            }}
-          >
+          <a href='/crew' className={`nav-item `} onClick={() => {}}>
             02 CREW
           </a>
-          <a
-            href='/technology'
-            className={`nav-item ${navi4}`}
-            onClick={() => {
-              setNav1(!nav1)
-              setNav2(!nav2)
-              setNav3(!nav3)
-              setNav4(true)
-            }}
-          >
+          <a href='/technology' className={`nav-item `} onClick={() => {}}>
             03 TECHNOLOGY
           </a>
           <span className='nav-indicator'></span>
         </nav>
       </div>
-      <div className={`mobileNav`}>
+      <div className={`mobileNav `}>
+        <img
+          src={Star}
+          alt='star'
+          className='absolute left-5 top-[25px] w-[40px] h-[40px]'
+        ></img>
         <HiMenu
-          className={`hamburger ${iconOn} text-[24px] cursor-pointer absolute right-2`}
+          className={`hamburger ${iconOn} w-[30px] h-[30px] cursor-pointer absolute right-5 top-[25px]`}
           onClick={() => {
             setIcon(false)
             console.log(iconOn)
           }}
         />
-        <nav className={`${iconOff}`}>
+        <nav className={`${iconOff} nav  h-[830px]`}>
           <AiOutlineClose
             onClick={() => {
               setIcon(true)
               console.log(iconOff)
             }}
-            className={`text-[24px] cursor-pointer absolute right-2`}
+            className={`w-[30px] h-[30px] cursor-pointer absolute right-5 top-[25px] `}
           />
-          <a href='/' className='nav-item'>
-            00 HOME
-          </a>
-          <a href='/destination' className='nav-item'>
-            01 DESTINATION
-          </a>
-          <a href='/crew' className='nav-item'>
-            02 CREW
-          </a>
-          <a href='/technology' className='nav-item'>
-            03 TECHNOLOGY
-          </a>
+          <div className='flex flex-col relative top-[150px] left-[20px]'>
+            <a href='/' className='nav-item'>
+              00 HOME
+            </a>
+            <a href='/destination' className='nav-item'>
+              01 DESTINATION
+            </a>
+            <a href='/crew' className='nav-item'>
+              02 CREW
+            </a>
+            <a href='/technology' className='nav-item'>
+              03 TECHNOLOGY
+            </a>
+          </div>
         </nav>
       </div>
     </div>

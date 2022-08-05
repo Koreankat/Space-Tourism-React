@@ -3,9 +3,9 @@ import "./home.css"
 
 export default function Home() {
   return (
-    <div className='menuBg h-[822px] absolute'>
+    <div className='menuBg h-[822px] absolute w-full'>
       <Navbar />
-      Home Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+      {/* Home Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
       mollitia, molestiae quas vel sint commodi repudiandae consequuntur
       voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat
       iusto fuga praesentium optio, eaque rerum! Provident similique accusantium
@@ -26,7 +26,7 @@ export default function Home() {
       Voluptatem quaerat non architecto ab laudantium modi minima sunt esse
       temporibus sint culpa, recusandae aliquam numquam totam ratione voluptas
       quod exercitationem fuga. Possimus quis earum veniam quasi aliquam
-      eligendi, placeat qui corporis!
+      eligendi, placeat qui corporis! */}
     </div>
   )
 }
