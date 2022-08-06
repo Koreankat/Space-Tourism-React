@@ -26,8 +26,8 @@ export default function Navbar() {
     <div className={`flex justify-end sm:mt-[20px] `}>
       <div className={` desktopNav flex`}>
         <img src={Star} alt='star' className='absolute left-5 top-[25px]'></img>
-        <div className='lg:w-[473px] lg:h-[1px] lg:block hidden bg-[#ffffff1a] left-[170px] top-[50px] absolute z-50'></div>
-        <nav className='nav lg:w-[51.875rem] sm:w-[28.125rem] flex justify-between items-center lg:pr-[130px] lg:pl-[130px] '>
+        <div className=' 2xl:w-[883px] lg:w-[473px] lg:h-[1px] lg:block hidden bg-[#ffffff1a] left-[170px] top-[50px] absolute z-50'></div>
+        <nav className='nav 2xl:w-[70rem] lg:w-[51.875rem] sm:w-[28.125rem] flex justify-between items-center lg:pr-[130px] lg:pl-[130px] '>
           <a href='/' className={`nav-item navi}`} onClick={() => {}}>
             00 HOME
           </a>
