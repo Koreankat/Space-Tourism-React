@@ -20,7 +20,7 @@
   .menuBg {
     background-image: url(/src/assets/home/background-home-tablet.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover 100%;
   }
 }
 @media (min-width: 1024px) {
