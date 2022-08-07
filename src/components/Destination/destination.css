@@ -1,10 +1,10 @@
-.bg {
+.destinationBg {
   background-image: url(/src/assets/destination/background-destination-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .light-white {
-  color: rgba(255, 255, 255, 0.238);
+  color: #ffffff3d;
   font-weight: bold;
 }
 .bellefair {
@@ -37,20 +37,24 @@
   opacity: 0;
   transition: 0.3s;
 }
+.navi:not(.is-active):before {
+  opacity: 1;
+  bottom: 0;
+}
 .nav-item:not(.is-active):hover:before {
   opacity: 1;
   bottom: 0;
 }
 
 @media (min-width: 640px) {
-  .bg {
+  .destinationBg {
     background-image: url(/src/assets/destination/background-destination-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1024px) {
-  .bg {
+  .destinationBg {
     background-image: url(/src/assets/destination/background-destination-desk.jpg);
     background-repeat: no-repeat;
     background-size: cover;

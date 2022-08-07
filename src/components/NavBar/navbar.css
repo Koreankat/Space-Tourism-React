@@ -24,10 +24,7 @@
   opacity: 1;
   bottom: 0;
 }
-.navi:before {
-  opacity: 1;
-  bottom: 0;
-}
+
 /* .nav-item:not(.is-active):hover {
   color: white;
   bottom: 0;

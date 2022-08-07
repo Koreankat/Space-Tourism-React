@@ -8,7 +8,7 @@ import { useEffect, useState } from "react"
 
 export default function Destination() {
   const [destination, setDestination] = useState(null)
-  const [X, setX] = useState(0)
+  const [index, setIndex] = useState(0)
   const [image, setImage] = useState(null)
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function Destination() {
       .then((data) => {
         setDestination(data)
       })
-    switch (X) {
+    switch (index) {
       case 0:
         setImage(Moon)
         break
@@ -35,9 +35,9 @@ export default function Destination() {
       default:
         setImage(Moon)
     }
-  }, [X])
+  }, [index])
   return (
-    <div className='bg lg:h-full sm:h-auto h-full absolute w-full'>
+    <div className='destinationBg lg:h-full sm:h-auto h-full absolute w-full'>
       <Navbar />
       {destination && (
         <div className='w-full flex  items-center justify-center '>
@@ -55,25 +55,45 @@ export default function Destination() {
             </div>
             <div className='lg:w-[445px] sm:w-[573px] w-[327px] lg:block flex flex-col items-center'>
               <div className='flex w-[285.5px] justify-between text-[16px] mb-3'>
-                <h1 className='cursor-pointer nav-item' onClick={() => setX(0)}>
+                <h1
+                  className={`cursor-pointer nav-item ${
+                    index === 0 ? "navi" : ""
+                  }`}
+                  onClick={() => setIndex(0)}
+                >
                   MOON
                 </h1>
-                <h1 className='cursor-pointer nav-item' onClick={() => setX(1)}>
+                <h1
+                  className={`cursor-pointer nav-item ${
+                    index === 1 ? "navi" : ""
+                  }`}
+                  onClick={() => setIndex(1)}
+                >
                   MARS
                 </h1>
-                <h1 className='cursor-pointer nav-item' onClick={() => setX(2)}>
+                <h1
+                  className={`cursor-pointer nav-item ${
+                    index === 2 ? "navi" : ""
+                  }`}
+                  onClick={() => setIndex(2)}
+                >
                   EUROPA
                 </h1>
-                <h1 className='cursor-pointer nav-item' onClick={() => setX(3)}>
+                <h1
+                  className={`cursor-pointer nav-item ${
+                    index === 3 ? "navi" : ""
+                  }`}
+                  onClick={() => setIndex(3)}
+                >
                   TITAN
                 </h1>
               </div>
               <h1 className='lg:text-[100px] sm:text-[80px] text-[56px]  bellefair'>
-                {destination.destinations[X].name.toUpperCase()}
+                {destination.destinations[index].name.toUpperCase()}
               </h1>
               <p className='lg:text-[18px] sm:text-[16px] text-[15px] lg:text-left text-center font-extralight barlow text-[#D0D6F9] mb-16'>
                 {" "}
-                {destination.destinations[X].description}
+                {destination.destinations[index].description}
               </p>
               <hr className='hr lg:mb-4 sm:mb-10' />
 
@@ -83,7 +103,7 @@ export default function Destination() {
                     AVG. DISTANCE
                   </h1>
                   <h1 className='bellefair text-[28px]'>
-                    {destination.destinations[X].distance.toUpperCase()}
+                    {destination.destinations[index].distance.toUpperCase()}
                   </h1>
                 </div>
                 <div className='flex flex-col '>
@@ -91,7 +111,7 @@ export default function Destination() {
                     Est. travel time
                   </h1>
                   <h1 className='bellefair text-[28px]'>
-                    {destination.destinations[X].travel.toUpperCase()}
+                    {destination.destinations[index].travel.toUpperCase()}
                   </h1>
                 </div>
               </div>
