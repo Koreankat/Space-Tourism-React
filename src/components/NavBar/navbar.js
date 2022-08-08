@@ -5,7 +5,7 @@ import { AiOutlineClose } from "react-icons/ai"
 
 import Star from "../../assets/shared/logo.svg"
 
-export default function Navbar(focused, setFocused) {
+export default function Navbar() {
   const [icon, setIcon] = useState(true)
   let iconOn = " block"
   let iconOff = " hidden"
@@ -31,40 +31,16 @@ export default function Navbar(focused, setFocused) {
         ></img>
         <div className=' 2xl:w-[883px] lg:w-[473px] lg:h-[1px] lg:block hidden bg-[#ffffff1a] left-[170px] top-[50px] absolute z-50'></div>
         <nav className='nav 2xl:w-[70rem] lg:w-[51.875rem] sm:w-[28.125rem] flex justify-between items-center lg:p-2 lg:pr-[130px] lg:pl-[130px] '>
-          <a
-            href='/'
-            className={`nav-item ${focused === 1 ? " navi" : ""}`}
-            onClick={() => {
-              setFocused(1)
-            }}
-          >
+          <a href='/' className={`nav-item `} onClick={() => {}}>
             00 HOME
           </a>
-          <a
-            href='/destination'
-            className={`nav-item ${focused === 2 ? " navi" : ""} `}
-            onClick={() => {
-              setFocused(2)
-            }}
-          >
+          <a href='/destination' className={`nav-item `} onClick={() => {}}>
             01 DESTINATION
           </a>
-          <a
-            href='/crew'
-            className={`nav-item ${focused === 3 ? " navi" : ""} `}
-            onClick={() => {
-              setFocused(3)
-            }}
-          >
+          <a href='/crew' className={`nav-item  `} onClick={() => {}}>
             02 CREW
           </a>
-          <a
-            href='/technology'
-            className={`nav-item ${focused === 4 ? " navi" : ""} `}
-            onClick={() => {
-              setFocused(4)
-            }}
-          >
+          <a href='/technology' className={`nav-item  `} onClick={() => {}}>
             03 TECHNOLOGY
           </a>
           <span className='nav-indicator'></span>
