@@ -43,7 +43,7 @@ export default function Crew() {
         <div className='w-full  flex items-center justify-center  '>
           <div className=' w-3/4  flex lg:flex-row sm:flex-col flex-col-reverse lg:items-end items-center justify-between'>
             <div className='mt-[80px]'>
-              <h1 className='lg:text-[28px] sm:text-[20px] text-[16px]  font-extralight sm:relative absolute lg:left-[-30px]  sm:left-[-90px] left-[125px] top-[75px] sm:mb-[120px] mb-[30px]'>
+              <h1 className='lg:text-[28px] sm:text-[20px] text-[16px]  font-extralight sm:relative absolute lg:left-[-30px]  sm:left-[-90px] left-[125px] lg:top-0 top-[75px] sm:mb-[120px] mb-[30px]'>
                 <span className='light-white mr-3 font-normal'>0 2</span> MEET
                 YOUR CREW
               </h1>

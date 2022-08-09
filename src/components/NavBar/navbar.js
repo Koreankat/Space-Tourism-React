@@ -46,11 +46,11 @@ export default function Navbar() {
           <span className='nav-indicator'></span>
         </nav>
       </div>
-      <div className={`mobileNav `}>
+      <div className={`mobileNav absolute z-50 `}>
         <img
           src={Star}
           alt='star'
-          className='absolute left-5 top-[25px] w-[40px] h-[40px]'
+          className='absolute left-[20px] top-[25px] w-[40px] h-[40px]'
         ></img>
         <HiMenu
           className={`hamburger ${iconOn} w-[30px] h-[30px] cursor-pointer absolute right-5 top-[25px]`}
@@ -59,11 +59,10 @@ export default function Navbar() {
             console.log(iconOn)
           }}
         />
-        <nav className={`${iconOff} nav  h-[830px]`}>
+        <nav className={`${iconOff} nav  w-[254px] absolute right-0 h-[830px]`}>
           <AiOutlineClose
             onClick={() => {
               setIcon(true)
-              console.log(iconOff)
             }}
             className={`w-[30px] h-[30px] cursor-pointer absolute right-5 top-[25px] `}
           />
